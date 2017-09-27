@@ -7,7 +7,7 @@ $(function() {
   btnLocation.on('click',obtener);
 
   function obtener() {
-    geoconfig={
+    geoconfig = {
       enableHighAccuracy:true,
       timeout:10000,
       maximunAge:60000

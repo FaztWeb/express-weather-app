@@ -1,23 +1,15 @@
-const path = require('path');
 const express = require('express');
-const ForecastIo = require('forecastio');
+const router = express.Router();
 
-let app = express();
+// forescastio
+const ForecastIo = require('forecastio');
 let weather = new ForecastIo("609c705291760311f891bb4f266f6460");
 
-app.set('port', process.env.PORT || 3000);
-app.set('x-powered-by', false);
-
-app.use(express.static(path.resolve(__dirname,'public')));
-app.set('views', path.resolve(__dirname,'views'));
-app.set('view engine','ejs');
-
-app.get('/', (req,res) => {
+router.get('/', (req,res) => {
   res.render('index');
 });
 
-app.get('/latitude/:latitude/longitude/:longitude', (req, res, next) => {
-  console.log(req.params.latitude, req.params.longitude);
+router.get('/latitude/:latitude/longitude/:longitude', (req, res, next) => {
 
   if (!req.params.latitude || !req.params.longitude) {
     res.status(404).render("404");
@@ -39,8 +31,4 @@ app.get('/latitude/:latitude/longitude/:longitude', (req, res, next) => {
   });
 });
 
-app.use((req,res) => {
-  res.status(404).render("404");
-});
-
-app.listen(3000);
+module.exports = router;

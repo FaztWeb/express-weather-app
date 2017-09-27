@@ -4,13 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "author": "Fabian Napa",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "forecastio": "^1.0.1"
+    "forecastio": "^1.0.1",
+    "morgan": "^1.8.2"
   }
 }
