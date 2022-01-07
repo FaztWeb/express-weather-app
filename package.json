@@ -4,14 +4,20 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "author": "Fabian Napa",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.4.1",
-    "express": "^4.13.4",
-    "forecastio": "^1.0.1",
-    "morgan": "^1.8.2"
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "forecastio": "^2.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

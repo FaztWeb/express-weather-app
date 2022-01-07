@@ -1,26 +1,42 @@
-<% include header %>
+<%- include('header') %>
 
-<div class="pure-form">
-  <fieldset>
-    <input
-      type="button"
-      name="btnLocation"
-      class="pure-button pure-button-primary"
-      value="Get Location">
-  </fieldset>
-</div>
+<main>
+  <div class="pure-form">
+    <fieldset>
+      <input
+        type="button"
+        name="btnLocation"
+        class="pure-button pure-button-primary"
+        value="Get Location"
+      />
+    </fieldset>
+  </div>
 
-<h1>What’s your location?</h1>
+  <h1>What’s your location?</h1>
 
-<form class="pure-form">
-  <fieldset>
-    <input type="number" name="latitude" placeholder="latitude" autofocus step="any" required>
-    <input type="number" name="longitude" placeholder="longitude" autofocus step="any" required>
-    <input type="submit" class="pure-button pure-button-primary" value="Go">
-  </fieldset>
-</form>
+  <form class="pure-form">
+    <fieldset>
+      <input
+        type="number"
+        name="latitude"
+        placeholder="latitude"
+        autofocus
+        step="any"
+        required
+      />
+      <input
+        type="number"
+        name="longitude"
+        placeholder="longitude"
+        autofocus
+        step="any"
+        required
+      />
+      <input type="submit" class="pure-button pure-button-primary" value="Go" />
+    </fieldset>
+  </form>
+</main>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/main.js"></script>
 
-<% include footer %>
+<%- include('footer') -%>
